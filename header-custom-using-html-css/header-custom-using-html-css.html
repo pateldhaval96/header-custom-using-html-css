@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		.logo-div img {
+			max-width: 50px;
+		}
+		header {
+    height: 100%;
+    width: 100%;
+    float: left;
+    background: white;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    .navigation {
+    margin: 0px;
+    float: right;
+}
+.navigation li {
+    list-style: none;
+    float: left;
+    display: inline-block;
+}
+.navigation li a {
+    color: #53b4a2;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+.navigation li a i {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.show-menu-btn,
+.hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.show-menu-btn {
+    margin: 0px;
+    float: right;
+}
+.show-menu-btn i {
+    /*line-height: 100px;*/
+    color: #3ba2c1;
+}
+.navigation a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+    color: #00ff0a;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+ header {
+        display: unset !important;
+    }
+    .show-menu-btn {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 30px;
+}
+.navigation {
+	display: none;
+    width: 100%;
+    background: linear-gradient(0deg,#05b68a 0,#3ba2c1 99%,#3ba2c1);
+    padding: 30px 0px;
+    transition: 1s;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.navigation li {
+    width: 100%;
+}
+.navigation li a {
+    padding: 15px 15px;
+    text-align: left;
+    color: white;
+}
+.navigation li a i {
+    width: auto;
+    font-size: 20px;
+}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+ header {
+        display: unset !important;
+    }
+    .show-menu-btn {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 30px;
+}
+.navigation {
+	display: none;
+    width: 100%;
+    background: linear-gradient(0deg,#05b68a 0,#3ba2c1 99%,#3ba2c1);
+    padding: 30px 0px;
+    transition: 1s;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.navigation li {
+    width: 100%;
+}
+.navigation li a {
+    padding: 15px 15px;
+    text-align: left;
+    color: white;
+}
+.navigation li a i {
+    width: auto;
+    font-size: 20px;
+}
+
+}
+
+
+
+
+
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="logo-div">
+			<a href="">
+				<img src="image/main-logo.png">
+			</a>
+		</div>
+		<label for="toggle-btn" class="show-menu-btn"><i class="fa fa-bars" aria-hidden="true"></i>
+		</label>
+		<div class="menu-div">
+			<ul class="navigation">
+				<li><a href="#" class="link-text">Home</a>
+				</li>
+				<li><a href="#" class="link-text">Individuals</a>
+				</li>
+				<li><a href="#" class="link-text">Doctor</a>
+				</li>
+				<li><a href="#" class="link-text">Blog</a>
+				</li>
+				<li><a href="#" class="link-text">Login</a>
+				</li>
+				<li><a href="#" class="link-text joinnow-btn">Join Now</a>
+				</li>
+				<label for="toggle-btn" class="hide-menu-btn"><i class="fas fa-times"></i>
+				</label>
+			</ul>
+		</div>
+	</header>
+</body>
+
+</html>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+      $(".show-menu-btn").click(function(){
+       $(".navigation").toggle();
+      });
+	});
+</script>
